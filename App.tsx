@@ -1,11 +1,11 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import Listitem from './component/listitem'
+import Auctionitem from './component/AuctionItems'
 
 const App = () => {
   return (
     <View>
-      <Listitem/>
+      <Auctionitem/>
     </View>
   )
 }

@@ -1,11 +1,11 @@
 import axios from 'axios';
-import {listType} from '../model';
 import {listStore} from '../store';
-export class listService {
+import { listType } from '../model';
+export class AuctiontManager {
   static getAll = async () => {
     try {
       listStore.isLoading = true;
-      const response = await axios.get(
+      const response = await axios.get<listType>(
         'https://www.bigiron.com/api/app/auctions?includeOtherAuction=true&itemsPerPage=20',
       );
     //   console.log('response.data', response.data.response.allUpcomingAuctions);
