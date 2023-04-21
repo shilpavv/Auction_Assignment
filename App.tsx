@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import Auctionitem from './component/AuctionItems'
+import Auctionitem from './src/component/AuctionItems'
 
 const App = () => {
   return (

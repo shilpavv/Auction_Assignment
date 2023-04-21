@@ -2,12 +2,12 @@ import { proxy } from "valtio";
 import { listType } from "../model";
 
 interface StoreType{
-    list: {};
+    list:listType[];
     isLoading:boolean;
-    error:string   
+    error: string | null;  
 }
 export const listStore = proxy<StoreType>({
     list: [],
     isLoading:false,
-    error:'something went wrong'
+    error: null,
 });

@@ -4,10 +4,8 @@ import {AuctiontManager} from '../manager/AuctionManager';
 import {listStore} from '../store';
 import {useEffect} from 'react';
 import {ArrowRightIcon} from 'react-native-heroicons/outline';
-
 const Auctionitem = () => {
   const {list, isLoading} = useSnapshot(listStore);
-  //console.log('list data', list);
   const loadList = async () => {
     await AuctiontManager.getAll();
   };
@@ -38,6 +36,7 @@ const Auctionitem = () => {
     </View>
   );
 };
+export default Auctionitem;
 const styles = StyleSheet.create({
   container: {
     alignItems: 'center',
@@ -81,4 +80,4 @@ const styles = StyleSheet.create({
     color: 'white',
   },
 });
-export default Auctionitem;
+

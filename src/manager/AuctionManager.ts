@@ -8,7 +8,6 @@ export class AuctiontManager {
       const response = await axios.get<listType>(
         'https://www.bigiron.com/api/app/auctions?includeOtherAuction=true&itemsPerPage=20',
       );
-    //   console.log('response.data', response.data.response.allUpcomingAuctions);
       if ( response.data && response.data.response &&response.data.response.allUpcomingAuctions
       ) {
         listStore.list = response.data.response.allUpcomingAuctions;
@@ -19,7 +18,6 @@ export class AuctiontManager {
     } catch (error) {
       console.log('I AM ERROR', error);
       listStore.isLoading = false;
-    //   return [];
     }
   };
 }
